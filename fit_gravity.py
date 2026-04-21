@@ -20,3 +20,12 @@ g_fitted = np.dot(t, v) / np.dot(t, t)
 print(f"Fitted gravitational acceleration: g = {g_fitted:.4f} m/s²")
 print(f"Expected value:                    g = 9.8100 m/s²")
 print(f"Difference:                            {abs(g_fitted - 9.81):.6f} m/s²")
+
+
+import os                                                                                                                                                                                                     
+os.makedirs('/data/outputs', exist_ok=True)
+with open('/data/outputs/result.txt', 'w') as f:                                                                                                                                                              
+         f.write(f"Fitted gravitational acceleration: g = {g_fitted:.4f} m/s²\n")                                                                                                                                  
+         f.write(f"Expected value:                    g = 9.8100 m/s²\n")
+         f.write(f"Difference:                            {abs(g_fitted - 9.81):.6f} m/s²\n")                                                                                                                      
+                                                                                                                                                                                                                
